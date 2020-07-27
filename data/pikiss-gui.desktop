@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=PiKISS
+GenericName=PiKISS
+Comment=Pi Keep it simply stupid
+Categories=GTK;Utility;
+Exec=pikiss-gui
+Icon=pikiss
+Terminal=false
+Type=Application
+StartupNotify=true
