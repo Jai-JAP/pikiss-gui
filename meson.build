@@ -28,13 +28,14 @@ config_dep = declare_dependency(
 	sources: config_h
 )
 
-config_inc_dir = include_directories('.')
-
-LightpadValaArgs = [
+ValaArgs = [
     '--pkg=config',
     '--vapidir=' + VAPI_DIR,
     '--target-glib=2.38',
 ]
+
+
+config_inc_dir = include_directories('.')
 
 executable(
     meson.project_name(),
@@ -54,7 +55,7 @@ executable(
     c_args: [
         '-DGMENU_I_KNOW_THIS_IS_UNSTABLE',
     ],
-    vala_args: LightpadValaArgs,
+    vala_args: ValaArgs,
     include_directories: config_inc_dir,
     install: true
 )
@@ -63,7 +64,7 @@ executable(
 icon_sizes = ['24', '32', '48', '64', '128']
 foreach i : icon_sizes
     install_data(
-        join_paths('data', 'icons', i, 'pikiss-gui.svg'),
+        join_paths('data', 'icons', i, 'pikiss-gui.png'),
         install_dir: join_paths(datadir, 'icons', 'hicolor', i + 'x' + i, 'apps')
     )
 endforeach

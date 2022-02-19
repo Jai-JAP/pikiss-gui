@@ -36,7 +36,7 @@ public class PiKISS : Window {
 				    button.set_size_request(80, 32);
 				    button.clicked.connect (() => {
 	                    try {
-	                        GLib.AppInfo.create_from_commandline ("\"" + directory + "/" + button.label + ".sh" + "\"", null, GLib.AppInfoCreateFlags.NEEDS_TERMINAL).launch (null, null);
+	                        GLib.AppInfo.create_from_commandline ("\"" + directory + "/" + button.label + ".sh" + "\"", null, GLib.AppInfoCreateFlags.NONE).launch(null,null);;
 	                    } catch (GLib.Error e) {
 	                        warning ("Error! Load application: " + e.message);
 	                    }
@@ -70,7 +70,7 @@ public class PiKISS : Window {
     public PiKISS () {
         this.title = "PiKISS (Pi Keeping It Simple, Stupid!)";
         this.window_position = WindowPosition.CENTER;
-        this.set_default_size (680, 480);
+        this.set_default_size (640, 480);
 
         var scroller = new ScrolledWindow (null, null);
 		scroller.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
