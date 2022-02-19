@@ -19,9 +19,9 @@ Run `meson build` to configure the build environment:
 This command creates a `build` directory. For all following commands, change to
 the build directory before running them.
 
-To build pikiss-gui, use `ninja`:
+To build pikiss-gui, use `build.sh`:
 
-    ninja
+    build.sh
 
 To install, use `ninja install`
 
