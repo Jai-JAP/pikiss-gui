@@ -49,6 +49,8 @@ with open(menuentrypath + 'pikiss-gui-sync.desktop', 'w') as f:
     print('Type=Application', file=f)
     print('StartupNotify=true', file=f)
     
+subprocess.call(['chmod', 'a+x', menuentrypath + 'pikiss-gui-sync.desktop'])
+
 
 """
 Creating uninstall.sh
