@@ -60,13 +60,10 @@ executable(
     install: true
 )
 
-# Install app icons
-icon_sizes = ['24', '32', '48', '64', '128']
-foreach i : icon_sizes
-    install_data(
-        join_paths('data', 'icons', i, 'pikiss-gui.png'),
-        install_dir: join_paths(datadir, 'icons', 'hicolor', i + 'x' + i, 'apps')
-    )
-endforeach
+# Install app icon
+install_data(
+    join_paths('data', 'pikiss-gui.png'),
+    install_dir: join_paths(datadir, 'icons')
+)
 
 meson.add_install_script('post_install.py')
