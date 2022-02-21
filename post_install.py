@@ -31,7 +31,7 @@ with open(menuentrypath + 'pikiss-gui.desktop', 'w') as f:
     print('Categories=Utility;', file=f)
     print('Exec=' + execpath, file=f)
     print('Icon=' + iconpath, file=f)
-    print('Terminal=true', file=f)
+    print('Terminal=false', file=f)
     print('Type=Application', file=f)
     print('StartupNotify=true', file=f)
     
