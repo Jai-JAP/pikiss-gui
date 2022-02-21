@@ -68,8 +68,8 @@ install_data(
 
 #Install getapps.sh
 install_data(
-    join_paths('data', 'getapps.sh')
-    install_mode: 'rwxr-xr-x'
+    join_paths('data', 'getapps.sh'),
+    install_mode: 'rwxr-xr-x',
     install_dir: join_paths(datadir, 'pikiss-gui')
 )
 
