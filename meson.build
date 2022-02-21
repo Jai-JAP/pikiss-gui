@@ -69,10 +69,4 @@ foreach i : icon_sizes
     )
 endforeach
 
-# Install our .desktop file so the Applications Menu will see it
-install_data(
-    join_paths('data', meson.project_name() + '.desktop'),
-    install_dir: join_paths(datadir, 'applications')
-)
-
 meson.add_install_script('post_install.py')
