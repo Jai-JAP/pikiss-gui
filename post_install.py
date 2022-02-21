@@ -70,7 +70,7 @@ Creating uninstall.sh
 """
 uninstallsh = os.path.normpath(os.getcwd() + os.sep + os.pardir) + os.sep + 'uninstall.sh'
 datadir = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'share', 'pikiss-gui')
-print('Creating uninstall script,)
+print('Creating uninstall script')
 
 with open(uninstallsh, 'w') as f:
     print('#!/bin/bash\n\n{', file=f)
