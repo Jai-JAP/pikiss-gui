@@ -1,8 +1,11 @@
 # pikiss-gui
-PiKISS for Raspberry Pi: A bunch of scripts with menu to make your life easier.  
+[PiKISS](https://github.com/jmcerrejon/piKiss) for Raspberry Pi: A bunch of scripts with menu to make your life easier. 
+ 
 PiKISS GUI: GTK frontend for PiKISS.
 
 ## Building, Testing, and Installation
+
+***You'll need piKiss preinstalled for app sync to work.***
 
 You'll need the following dependencies:
 * meson >= 0.48.2
