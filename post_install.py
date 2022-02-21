@@ -17,7 +17,7 @@ Create PiKISS GUI menuentry
 
 menuentrypath = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'share', 'applications') + os.sep
 execpath = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'bin', 'pikiss-gui')
-iconpath = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'share', 'icons', 'pikiss-gui')
+iconpath = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'share', 'icons', 'pikiss-gui.png')
 
 with open(menuentrypath + 'pikiss-gui.desktop', 'w') as f:
     print('[Desktop Entry]', file=f)
