@@ -3,19 +3,35 @@
 import os
 import subprocess
 
-hicolor = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'share', 'icons', 'hicolor')
-
-if not os.environ.get('DESTDIR'):
-    print('Updating icon cache...')
-    subprocess.call(['gtk-update-icon-cache', '-q', '-t' ,'-f', hicolor])
-
-
 """
 Create categories
 """
 from_cat = os.path.normpath(os.getcwd() + os.sep + os.pardir) + os.path.join(os.sep, 'data', 'categories', '.')
 to_cat = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'share', 'pikiss-gui') + os.sep
 subprocess.call(['cp', '-R', from_cat, to_cat])
+
+
+"""
+Create PiKISS GUI menuentry
+"""
+
+menuentrypath = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'share', 'applications') + os.sep
+execpath = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'bin', 'pikiss-gui')
+iconpath = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'share', 'icons', 'pikiss-gui')
+
+with open(menuentrypath + 'pikiss-gui.desktop', 'w') as f:
+    print('[Desktop Entry]', file=f)
+    print('Name=PiKISS GUI', file=f)
+    print('GenericName=PiKISS', file=f)
+    print('Comment=GTK frontend for PiKISS', file=f)
+    print('Categories=Utility;', file=f)
+    print('Exec=' + execpath, file=f)
+    print('Icon=' + iconpath, file=f)
+    print('Terminal=true', file=f)
+    print('Type=Application', file=f)
+    print('StartupNotify=true', file=f)
+    
+subprocess.call(['chmod', 'a+x', menuentrypath + 'pikiss-gui.desktop'])
 
 
 """
@@ -33,10 +49,8 @@ print('\n\nImporting apps successful.')
 
 
 """
-Creating PiKISS GUI Sync menuentry
+Create PiKISS GUI Sync menuentry
 """
-menuentrypath = os.path.join(os.environ['MESON_INSTALL_PREFIX'], 'share', 'applications') + os.sep
-
 with open(menuentrypath + 'pikiss-gui-sync.desktop', 'w') as f:
     print('[Desktop Entry]', file=f)
     print('Name=PiKISS GUI Sync', file=f)
@@ -44,7 +58,7 @@ with open(menuentrypath + 'pikiss-gui-sync.desktop', 'w') as f:
     print('Comment=Sync Apps with PiKISS', file=f)
     print('Categories=Utility;', file=f)
     print('Exec=' + script_path, file=f)
-    print('Icon=pikiss-gui', file=f)
+    print('Icon=' + iconpath, file=f)
     print('Terminal=true', file=f)
     print('Type=Application', file=f)
     print('StartupNotify=true', file=f)
