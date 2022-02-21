@@ -1,5 +1,5 @@
 # pikiss-gui
-PiKISS for Raspberry Pi: A bunch of scripts with menu to make your life easier.
+PiKISS for Raspberry Pi: A bunch of scripts with menu to make your life easier.  
 PiKISS GUI: GTK frontend for PiKISS.
 
 ## Building, Testing, and Installation
