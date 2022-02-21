@@ -66,11 +66,4 @@ install_data(
     install_dir: join_paths(datadir, 'icons')
 )
 
-#Install getapps.sh
-install_data(
-    join_paths('data', 'getapps.sh'),
-    install_mode: 'rwxr-xr-x',
-    install_dir: join_paths(datadir, 'pikiss-gui')
-)
-
 meson.add_install_script('post_install.py')

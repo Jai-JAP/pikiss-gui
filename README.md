@@ -14,7 +14,7 @@ You'll need the following dependencies:
 
 Run `meson build` to configure the build environment:
 
-    meson --prefix=/usr/local -Dbuildtype=release build
+    meson --prefix=~/.local -Dbuildtype=release build
     
 This command creates a `build` directory. For all following commands, change to
 the build directory before running them.
