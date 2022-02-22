@@ -26,7 +26,7 @@ public class PiKISS : Window {
         try {
             Dir dir = Dir.open (directory, 0);
             string? name = null;
-
+            string pikiss = Config.pikiss-dir;
             while ((name = dir.read_name ()) != null) {
                 string path = Path.build_filename (directory, name);
 
@@ -36,7 +36,7 @@ public class PiKISS : Window {
 				    button.set_size_request(80, 32);
 				    button.clicked.connect (() => {
 	                    try {
-	                        GLib.AppInfo.create_from_commandline ("\"" + directory + "/" + button.label + ".sh" + "\"", null, GLib.AppInfoCreateFlags.NONE).launch(null,null);;
+	                        GLib.AppInfo.create_from_commandline ("cd \"" + pikiss + "\" && \"" + directory + "/" + button.label + ".sh" + "\"", null, GLib.AppInfoCreateFlags.NONE).launch(null,null);;
 	                    } catch (GLib.Error e) {
 	                        warning ("Error! Load application: " + e.message);
 	                    }
