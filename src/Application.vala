@@ -36,7 +36,7 @@ public class PiKISS : Window {
 				    button.set_size_request(80, 32);
 				    button.clicked.connect (() => {
 	                    try {
-	                        GLib.AppInfo.create_from_commandline ("cd \"" + pikiss + "\" && \"" + directory + "/" + button.label + ".sh" + "\"", null, GLib.AppInfoCreateFlags.NONE).launch(null,null);;
+	                        GLib.AppInfo.create_from_commandline ("x-terminal-emulator -e bash -c 'cd \"" + pikiss + "\" && \"" + directory + "/" + button.label + ".sh" + "\"'", null, GLib.AppInfoCreateFlags.NONE).launch(null,null);;
 	                    } catch (GLib.Error e) {
 	                        warning ("Error! Load application: " + e.message);
 	                    }
