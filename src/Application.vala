@@ -26,7 +26,7 @@ public class PiKISS : Window {
         try {
             Dir dir = Dir.open (directory, 0);
             string? name = null;
-             string pikiss = Config.pikissdir;
+            string pikiss = Config.pikissdir;
             while ((name = dir.read_name ()) != null) {
                 string path = Path.build_filename (directory, name);
 
