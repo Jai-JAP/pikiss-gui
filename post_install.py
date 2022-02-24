@@ -48,7 +48,7 @@ with open(os.environ['MESON_BUILD_ROOT'] + '/config.h') as conf:
         if 'pikiss-script' in line:
             fields = line.strip().split()
             pikiss = fields[2]
-        if 'PIKISSDIR' in line:
+        if 'pikissdir' in line:
             fields = line.strip().split()
             pikissdir = fields[2]
 
