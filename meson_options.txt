@@ -1,1 +1,1 @@
-option('pikiss-dir', type : 'string', value : '/home/pi/piKiss', description : 'Absolute PATH to piKiss folder. (Default: /home/pi/piKiss)')
+option('pikissdir', type : 'string', value : '/home/pi/piKiss', description : 'Absolute PATH to piKiss folder. (Default: /home/pi/piKiss)')
