@@ -2,7 +2,7 @@ project(
     'pikiss-gui',
     'vala', 'c',
     version: '0.0.8',
-    meson_version: '>=0.50.0'
+    meson_version: '>=0.57.0'
 )
 
 PROJECT_NAME = 'pikiss-gui'
