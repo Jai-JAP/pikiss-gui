@@ -1,7 +1,7 @@
 project(
     'pikiss-gui',
     'vala', 'c',
-    version: '0.0.8',
+    version: '0.0.9',
     meson_version: '>=0.57.0'
 )
 
