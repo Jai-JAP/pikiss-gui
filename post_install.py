@@ -45,10 +45,10 @@ Create App import script
 #Gettig configs
 with open(os.environ['MESON_BUILD_ROOT'] + '/config.h') as conf:
     for line in conf.readlines():
-        if 'pikiss-script' in line:
+        if 'pikiss_script' in line:
             fields = line.strip().split()
             pikiss = fields[2]
-        if 'pikiss-dir' in line:
+        if 'pikissdir' in line:
             fields = line.strip().split()
             pikissdir = fields[2]
 
