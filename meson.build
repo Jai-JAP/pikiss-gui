@@ -68,4 +68,4 @@ install_data(
     install_dir: join_paths(datadir, 'icons')
 )
 
-add_install_script('post_install.sh')
+meson.add_install_script('post_install.sh')
