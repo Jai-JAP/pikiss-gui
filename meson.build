@@ -10,7 +10,7 @@ prefix = get_option('prefix')
 libdir = join_paths(prefix, get_option('libdir'))
 datadir = join_paths(prefix, get_option('datadir'))
 
-VAPI_DIR = join_paths(meson.source_root(), 'vapi')
+VAPI_DIR = join_paths(meson.project_source_root(), 'vapi')
 vala = meson.get_compiler('vala')
 
 conf = configuration_data()
@@ -68,4 +68,4 @@ install_data(
     install_dir: join_paths(datadir, 'icons')
 )
 
-meson.add_install_script('post_install.py')
+meson.add_install_script('post_install.sh')
