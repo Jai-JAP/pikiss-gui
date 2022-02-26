@@ -56,7 +56,7 @@ cat << EOF > ${getappssh}
 # echo -e "\\x1b[1;5;93mThis script may ask you for your password. \\nPlease enter your password if asked.\\x1b[0m\\n"
 # echo -en "\\x1b[1;92mPress [ENTER] to continue.\\x1b[0m" ; read -p ""
 
-disabled_apps=\$(grep "[[:blank:]]# " ${pikiss} | awk '{print $2}' | tr '\\n' '|' | sed 's/|$//')
+disabled_apps=\$(grep "[[:blank:]]# " ${pikiss} | awk '{print \$2}' | tr '\\n' '|' | sed 's/|$//')
 
 declare -a categories=("Tweaks" "Games" "Emulators" "Info" "Multimedia" "Configure" "Internet" "Server" "Devs" "Others")
 for category in "\${categories[@]}";
