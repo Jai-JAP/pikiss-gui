@@ -64,7 +64,7 @@ for category in "\${categories[@]}";
     awk -v smcat="sm\$category" '\$0~smcat{f=1; next} /done/{f=0} f' ${pikiss} | 
     awk '/esac/{f=0} f; /Back\) break ;;/{f=1}' | sed -r 's+\)+.sh+g' | sed -r 's|VSCode/ium|VSCodium|g' | 
     sed -r 's|./scripts| ${pikissdir}/scripts|g' | tr -d ';' | grep -v uninstall_pikiss | grep -v -E "\$disabled_apps" | 
-    awk -v inst="${datadir}\$category" '{print "sudo ln -s ",\$2,inst\$1,"2>/dev/null"}' | bash 
+    awk -v inst="${datadir}\$category/" '{print "sudo ln -s ",\$2,inst\$1,"2>/dev/null"}' | bash 
     echo .
   done
 
