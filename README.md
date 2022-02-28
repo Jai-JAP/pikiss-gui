@@ -42,7 +42,7 @@ Run `sudo ninja -C build install` to install PiKISS GUI
  
 Run `sudo ninja -C build postinst' to sync apps with PiKISS & create other data files
  ```
- sudo ninja -C build post
+ sudo ninja -C build postinst
  ```
 </details>
 
