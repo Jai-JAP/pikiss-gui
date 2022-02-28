@@ -16,21 +16,31 @@ You'll need the following dependencies:
 * libgnome-menu-3-dev
 * valac
 
-Run `meson build` to configure the build environment:
-
-    meson --prefix=~/.local -Dbuildtype=release build
-    
-This command creates a `build` directory. For all following commands, change to
-the build directory before running them.
-
-To build pikiss-gui, use `build.sh`:
+ To build & install pikiss-gui, use `build.sh` (works in most cases) if doesn't work try installing manually.
 
     build.sh
+    
+<details>
+<summary><b>To install PiKISS GUI manually</b> if you prefer to see what happens under the hood</summary>
+ 
+Run `meson build` to configure the build environment:
+ * [Optional] set --pikissdir as absolute path to your piKiss installation directory
+     - Relative paths like `~/home/pi/piKiss` & `../piKiss` may work for compilation but will cause runtime errors.
+ ```
+ meson --prefix=~/.local --pikissdir=/home/pi/piKiss -Dbuildtype=release build
+ ```
 
-To install, use `ninja install`
+Run `ninja -C build` to build PiKISS GUI
+ ```
+ ninja -C build
+ ```
+ 
+Run `sudo ninja -C build install` to install PiKISS GUI
+ ```
+ sudo ninja -C build install
+ ```
+</details>
 
-    ninja install
-
-To uninstall, use `uninstall.sh` (Generated after installation in build dir)
+To uninstall, use `uninstall.sh` (Generated after installation in source dir)
 
     uninstall.sh
