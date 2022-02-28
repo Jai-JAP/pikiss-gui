@@ -8,7 +8,7 @@ PiKISS GUI: GTK frontend for PiKISS.
 ***You'll need piKiss preinstalled for app sync to work.***
 
 You'll need the following dependencies:
-* meson >= 0.48.2
+* meson >= 0.57
 * gobject-introspection
 * libgee-0.8-dev
 * libgirepository1.0-dev
