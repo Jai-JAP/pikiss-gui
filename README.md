@@ -39,6 +39,11 @@ Run `sudo ninja -C build install` to install PiKISS GUI
  ```
  sudo ninja -C build install
  ```
+ 
+Run `sudo ninja -C build postinst' to sync apps with PiKISS
+ ```
+ sudo ninja -C build post
+ ```
 </details>
 
 To uninstall, use `uninstall.sh` (Generated after installation in source dir)
