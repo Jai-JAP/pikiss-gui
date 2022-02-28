@@ -68,4 +68,4 @@ install_data(
     install_dir: join_paths(datadir, 'icons')
 )
 
-run_target('postinst', command: ['post_install.sh'], env: {'MESON_INSTALL_PREFIX': prefix}
+run_target('postinst', command: ['post_install.sh'], env: {'MESON_INSTALL_PREFIX': prefix})
