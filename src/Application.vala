@@ -86,7 +86,7 @@ public class PiKISS : Window {
 		scroller.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
 
         var toolbar = new Toolbar ();
-        toolbar.get_style_context ().add_class (STYLE_CLASS_PRIMARY_TOOLBAR);
+        //toolbar.get_style_context ().add_class (STYLE_CLASS_PRIMARY_TOOLBAR);
 
 	var vbox = new Box(Orientation.VERTICAL, 0);
         vbox.pack_start (toolbar, false, true, 0);
