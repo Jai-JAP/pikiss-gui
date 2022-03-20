@@ -81,7 +81,7 @@ echo -e 'App import script created successfully.\n'
 #Create PiKISS GUI Sync Apps menuentry
 echo 'Creating PiKISS GUI Sync Apps menuentry...'
 cat << EOF > ${menuentrypath}pikiss-gui-sync-apps.desktop
-Desktop Entry]
+[Desktop Entry]
 Name=PiKISS GUI Sync Apps
 GenericName=PiKISS App Sync
 Comment=Sync Apps with PiKISS
