@@ -3,6 +3,8 @@
  
 PiKISS GUI: GTK frontend for PiKISS.
 
+Thanks to @krishenrikesn for his initial work on [pikiss-gui](https://github.com/krishenriksen/pikiss-gui)
+
 ## Building, Testing, and Installation
 
 ***You'll need piKiss preinstalled for app sync to work.***
