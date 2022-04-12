@@ -26,10 +26,10 @@ You'll need the following dependencies:
 <summary><b>To install PiKISS GUI manually</b> if you prefer to see what happens under the hood</summary>
  
 Run `meson build` to configure the build environment:
- * [Optional] set --pikissdir as absolute path to your piKiss installation directory
+ * [Optional] set -Dpikissdir as absolute path to your piKiss installation directory
      - Relative paths like `~/piKiss` & `../piKiss` may work for compilation but ***will cause runtime errors***.
  ```
- meson --prefix=~/.local --pikissdir=${HOME}/piKiss -Dbuildtype=release build
+ meson --prefix=~/.local -Dpikissdir=${HOME}/piKiss -Dbuildtype=release build
  ```
 
 Run `ninja -C build` to build PiKISS GUI
