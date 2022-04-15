@@ -18,20 +18,23 @@ You'll need the following dependencies:
 * libgnome-menu-3-dev
 * valac
 
- To build & install pikiss-gui, use `build.sh` (works in most cases) if doesn't work try installing manually.
-
-    build.sh
-    
+ To build & install pikiss-gui, use `build.sh`.
+ * build.sh assumes that piKiss is installed at ${HOME}/piKiss, if piKiss is installed at a different location than ${HOME}/piKiss then run build.sh with PIKISSDIR=your_piKiss_dir
+```
+    PIKISSDIR=your_piKiss_dir build.sh
+```    
 <details>
 <summary><b>To install PiKISS GUI manually</b> if you prefer to see what happens under the hood</summary>
  
 Run `meson build` to configure the build environment:
- * [Optional] set -Dpikissdir as absolute path to your piKiss installation directory
-     - Relative paths like `~/piKiss` & `../piKiss` may work for compilation but ***will cause runtime errors***.
  ```
  meson --prefix=~/.local -Dpikissdir=${HOME}/piKiss -Dbuildtype=release build
  ```
-
+ * If you did not install piKiss in your home directory; then set -Dpikissdir as absolute path to your piKiss installation directory.
+     - Relative paths like `~/piKiss` & `../piKiss` may work for compilation but ***will cause runtime errors***.
+ ```
+ meson --prefix=~/.local -Dpikissdir=your_piKiss_dir -Dbuildtype=release build
+ ```
 Run `ninja -C build` to build PiKISS GUI
  ```
  ninja -C build
@@ -49,5 +52,6 @@ Run `sudo ninja -C build postinst' to sync apps with PiKISS & create other data 
 </details>
 
 To uninstall, use `uninstall.sh` (Generated after installation in source dir)
-
+```
     uninstall.sh
+```
