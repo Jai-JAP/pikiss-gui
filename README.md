@@ -55,3 +55,7 @@ To uninstall, use `uninstall.sh` (Generated after installation in source dir)
 ```
     uninstall.sh
 ```
+
+# For Support
+- Open an issue [here](https://github.com/Jai-JAP/pikiss-gui/issues)
+- Join the Discord server https://discord.gg/Jfu3Mbd3Ru
