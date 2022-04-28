@@ -5,5 +5,5 @@ else
   meson --prefix="${HOME}/.local" -Dpikissdir="${HOME}/piKiss" -Dbuildtype=release build
 fi
 ninja -C build -j4
-sudo ninja -C build install
+ninja -C build install
 sudo ninja -C build postinst
