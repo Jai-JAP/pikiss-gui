@@ -6,4 +6,4 @@ else
 fi
 ninja -C build -j4
 ninja -C build install
-sudo ninja -C build postinst
+ninja -C build postinst
