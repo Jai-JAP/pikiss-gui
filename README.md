@@ -42,14 +42,16 @@ Run `ninja -C build` to build PiKISS GUI
  ninja -C build
  ```
  
-Run `sudo ninja -C build install` to install PiKISS GUI
+Run `ninja -C build install` to install PiKISS GUI
+* Run with sudo if prefix is /usr or /usr/local
  ```
- sudo ninja -C build install
+ ninja -C build install
  ```
  
-Run `sudo ninja -C build postinst' to sync apps with PiKISS & create other data files
+Run `ninja -C build postinst` to sync apps with PiKISS & create other data files
+* Run with sudo if prefix is /usr or /usr/local
  ```
- sudo ninja -C build postinst
+ ninja -C build postinst
  ```
 </details>
 
