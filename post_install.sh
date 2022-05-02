@@ -61,6 +61,7 @@ disabled_apps=\$(grep "[[:blank:]]# " ${pikiss} | awk '{print \$2}' | tr '\\n' '
 declare -a categories=("Tweaks" "Games" "Emulators" "Info" "Multimedia" "Configure" "Internet" "Server" "Devs" "Others")
 for category in "\${categories[@]}";
   do
+    mkdir -p "${datadir}\$category"
     awk -v smcat="sm\$category" '\$0~smcat{f=1; next} /done/{f=0} f' ${pikiss} | 
     awk '/esac/{f=0} f; /Back\) break ;;/{f=1}' | sed -r 's+\)+.sh+g' | sed -r 's|VSCode/ium|VSCode|g' | 
     sed -r 's|./scripts| ${pikissdir}/scripts|g' | tr -d ';' | grep -v uninstall_pikiss | grep -v -E "\$disabled_apps" | 
