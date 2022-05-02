@@ -1,15 +1,6 @@
 #!/bin/bash
 echo -e '\n\n'
 
-#Create categories
-echo 'Creating PiKISS GUI category dirs...'
-from_cat="${MESON_SOURCE_ROOT}/data/categories/."
-datadir="${MESON_INSTALL_PREFIX}/share/pikiss-gui/"
-cp -R ${from_cat} ${datadir}
-
-echo -e 'PiKISS GUI category dirs created successfully.\n'
-
-
 #Create PiKISS GUI menuentry
 echo 'Creating PiKISS GUI menuentry...'
 menuentrypath="${MESON_INSTALL_PREFIX}/share/applications/"
@@ -41,6 +32,7 @@ getopt(){
 pikiss=$(getopt 'pikiss_script')
 pikissdir=$(getopt 'pikissdir')
 getappssh="${MESON_INSTALL_PREFIX}/share/pikiss-gui/getapps.sh"
+datadir="${MESON_INSTALL_PREFIX}/share/pikiss-gui/"
 
 echo 'Creating App import script...'
 #Create getapps.sh
