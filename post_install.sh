@@ -68,7 +68,7 @@ for category in "\${categories[@]}";
     echo .
   done
 
-sudo find ${datadir} -xtype l -delete
+find ${datadir} -xtype l -delete
 echo -en "\\n\\x1b[1;92mPiKISS Apps successfully synced.\\x1b[0m\\n"
 
 exit 0
@@ -143,4 +143,7 @@ echo -e 'Uninstall script created successfully.\n'
 
 #Syncing Apps
 echo -e 'Syncing Apps with PiKISS...\n\n'
-su $SUDO_USER ${getappssh}
+if [[ $(id -u) == '0' ]]; then
+  su $SUDO_USER ${getappssh}
+else 
+  ${getappssh}
