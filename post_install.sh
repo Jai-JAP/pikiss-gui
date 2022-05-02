@@ -147,3 +147,4 @@ if [[ $(id -u) == '0' ]]; then
   su $SUDO_USER ${getappssh}
 else 
   ${getappssh}
+fi
