@@ -21,7 +21,7 @@ You'll need the following dependencies:
 * valac
 
  To build & install pikiss-gui, use `build.sh`.
- * build.sh assumes that piKiss is installed at `${HOME}/piKiss`, if piKiss is installed at a different location than ${HOME}/piKiss then run build.sh with PIKISSDIR=your_piKiss_dir
+ * build.sh assumes that piKiss is installed at `${HOME}/piKiss`, if piKiss is installed at a different location then run build.sh with `PIKISSDIR=your_piKiss_dir`
 ```
     PIKISSDIR=your_piKiss_dir build.sh
 ```    
